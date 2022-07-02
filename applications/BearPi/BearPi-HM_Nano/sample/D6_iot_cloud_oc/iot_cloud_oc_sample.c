@@ -284,7 +284,7 @@ static int task_sensor_entry(void)
         E53_IA1_Read_Data(&data);
         app_msg = malloc(sizeof(app_msg_t));
         //printf("SENSOR:lum:%.2f temp:%.2f hum:%.2f\r\n", data.Lux, data.Temperature, data.Humidity);
-        print("SensorData: Temp: %.2f Hum: %.2f Flow: %.2f Disp: %.2f Press: %.2f\n\r",data);
+        print("SensorData: Temp: %.2f Hum: %.2f Flow: %.2f Disp: %.2f Press: %.2f\n\r",data.Temperature,data.Humidity,data.FlowRate,data.Displacement,data.Pressure);
         if (NULL != app_msg)
         {
             app_msg->msg_type = en_msg_report;
