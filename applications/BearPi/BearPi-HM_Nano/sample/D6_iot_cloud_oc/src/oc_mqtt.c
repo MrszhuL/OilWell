@@ -267,6 +267,7 @@ int oc_mqtt_profile_msgup(char *deviceid,oc_mqtt_profile_msgup_t *payload)
     char *topic;
     char *msg;
 
+
     if(NULL == deviceid)
     {
         if(NULL == s_oc_mqtt_profile_cb.device_id)
