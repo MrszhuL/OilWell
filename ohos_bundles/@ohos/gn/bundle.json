@@ -1,0 +1,15 @@
+{
+    "name": "@ohos/gn",
+    "version": "0.0.1-1525",
+    "publishAs": "code-segment",
+    "scripts": {
+        "install": "./scripts/install.sh",
+        "uninstall": "./scripts/uninstall.sh"
+    },
+    "description": "gn for dev",
+    "keywords": [
+        "gn"
+    ],
+    "license":"{HPM_GN_INSTALL}/gn/LICENSE",
+    "repository": "https://gn.googlesource.com/gn/"
+}

@@ -1,0 +1,24 @@
+{
+    "name": "@bearpi/hm_nano_build",
+    "version": "1.0.0",
+    "publishAs": "code-segment",
+    "description": "基于鸿蒙官方的build组件，适配了BearPi-HM_Nano开发板",
+    "scripts": {
+        "install": "DEST_PATH=${DEP_BUNDLE_BASE}/build &&mkdir -p $DEST_PATH && cp -r ./* $DEST_PATH"
+    },
+    "keywords": [
+        "bearpi",
+        "build"
+    ],
+    "license": "Apache V2",
+    "repository": "",
+    "homepage": "",
+    "tags": [
+        "build"
+    ],
+    "ohos": {
+        "os": "1.0.0",
+        "kernel": "liteos-a,liteos-m",
+        "board": "hi3516,hi3518,hi3861"
+    }
+}

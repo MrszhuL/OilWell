@@ -1,0 +1,73 @@
+{
+  "name": "@bearpi/bearpi_hm_nano",
+  "version": "1.0.5",
+  "publishAs": "distribution",
+  "dirs": {
+    ".": "product.template.json",
+    "dist_scripts": [
+      "dist_scripts/*"
+    ]
+  },
+  "scripts": {
+    "dist": "hpm run parse && hpm run select && hpm run connect && hpm run compile",
+    "parse": "node ./dist_scripts/parse_platform_hpm.js hi3861v100_liteos_riscv",
+    "select": "node ./dist_scripts/select_product.js",
+    "connect": "node ./dist_scripts/connect_subsystem.js BearPi-HM_Nano",
+    "compile": "export PATH=$PATH:${HPM_GCC_INSTALL}/gcc_riscv32/bin:${HPM_GN_INSTALL}/gn:${HPM_NINJA_INSTALL}/ninja:&&ln -sf ${DEP_BUNDLE_BASE}/build/lite/build.py ${DEP_BUNDLE_BASE}/build.py &&cd ${DEP_BUNDLE_BASE}&& python ${DEP_BUNDLE_BASE}/build.py BearPi-HM_Nano",
+    "install": "cp product.template.json ${DEP_BUNDLE_BASE}",
+    "eco":"echo $target"
+  },
+  "dependencies": {
+    "@ohos/hiview": "~1.0.0",
+    "@ohos/iot_controller": "~1.0.0",
+    "@ohos/hichainsdk": "~1.0.0",
+    "@ohos/syspara": "~1.0.0",
+    "@ohos/bootstrap": "~1.0.0",
+    "@ohos/token": "~1.0.0",
+    "@bearpi/hm_nano_build": "^1.0.0",
+    "@ohos/wlan": "~1.0.0",
+    "@ohos/system_ability_manager": "~1.0.0",
+    "@ohos/utils": "~1.0.0",
+    "@ohos/xts": "~1.0.0",
+    "@bearpi/hm_nano_hi3861": "^1.0.0",
+    "@ohos/hi3861_adapter": "~1.0.0",
+    "@bearpi/bearpi_hm_nano_sample_app": "^1.0.1",
+    "@bearpi/hm_nano_paho_mqtt":"^1.0.0",
+    "@bearpi/hm_nano_iot_link":"^1.0.0",
+    "@ohos/mbedtls": "~1.1.0",
+    "@ohos/cjson": "~1.0.0",
+    "@ohos/oem_iotlink": "~1.0.0",
+    "@ohos/cmsis": "~1.0.0",
+    "@ohos/soft_bus": "~1.0.0",
+    "@ohos/gn": "~0.0.1-1523",
+    "@ohos/ninja": "~1.9.0",
+    "@ohos/hilog_m": "~1.0.0",
+    "@ohos/unity": "~1.0.0",
+    "@ohos/gcc_riscv32": "~7.3.0"
+  },
+  "envs": {
+    "target": "arm",
+    "sysroot": "./dir",
+    "dumpmachine": ""
+  },
+  "description": "BearPi-HM_Nano开发板，用于HarmonyOS快速入门学习，提供丰富案例及教程",
+  "ohos": {
+    "os": "1.0.0",
+    "board": "hi3861",
+    "kernel": "liteos-m"
+  },
+  "author": {
+    "name": "bearpi",
+    "email": "admin@bearpi.cn",
+    "url": ""
+  },
+  "keywords": [
+    "bearpi",
+    "hi3861",
+    "wifi",
+    "iot"
+  ],
+  "homepage": "",
+  "repository": "https://gitee.com/bearpi/bearpi-hm_nano",
+  "license": "Apache V2 "
+}
