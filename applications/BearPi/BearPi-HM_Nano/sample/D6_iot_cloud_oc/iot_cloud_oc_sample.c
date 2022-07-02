@@ -303,7 +303,7 @@ static int task_sensor_entry(void)
     return 0;
 }
 
-//////////////////////above changed///////////////////
+//////////////////////above changed////////////////////
 
 static void OC_Demo(void)
 {
