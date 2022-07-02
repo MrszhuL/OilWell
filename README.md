@@ -9,4 +9,4 @@ Dist is a basic distribution template. It shows the basic settings that one dist
 
 # OilWell Project
 
-This is a oilwell sensor project based on liteOS Bearpi. 
+This is an oilwell sensor project based on liteOS Bearpi. 
