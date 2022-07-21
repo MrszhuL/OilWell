@@ -121,7 +121,7 @@ if __name__=="__main__":
     print(args)
     print(argv)
     if(args <= 2):
-        print("param should be : python main.py \"outputPath\" \"name|burnAddr|burnSize|type\"...")
+        print("param should be : python generator.py \"outputPath\" \"name|burnAddr|burnSize|type\"...")
         '''
         enum IMAGE_TYPE {
         IMAGE_TYPE_LOADER,
