@@ -1,5 +1,6 @@
 import json
 import random
+import time
 
 
 class Gene:
@@ -10,5 +11,10 @@ class Gene:
         data['Humidity'] = random.randint(1, 100)
         data['Pressure'] = random.randint(1, 100)
         data['FlowRate'] = random.randint(1, 100)
-        with open(r'./DataGenerator/data.json', 'w') as f:
+        with open(r"./DataGenerator/data.json", 'w') as f:
             json.dump(data, f)
+
+
+while 1:
+    Gene()
+    time.sleep(1)
